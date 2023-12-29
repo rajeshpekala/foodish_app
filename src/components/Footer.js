@@ -14,14 +14,15 @@ className = "bg-black flex flex-row "
 </div>
 
 <div  className = "flex flex-col px-8 py-1 mx-8 list-none text-white">
-    <h3 className ="font-bold">Contact Us</h3>
+    <h3 className ="font-bold">Follow Us on</h3>
     <li className="py-2 text-lg"><FontAwesomeIcon icon={faFacebook} size="2xl" style={{color: "#fefbfb",}} /></li>
     <li className="py-2  text-lg"><FontAwesomeIcon icon={faInstagram} size="2xl" style={{color: "#fefbfb",}} /></li>
     <li className ="py-2 text-white" > <FontAwesomeIcon icon={faPhone} size="xl" style={{color: "#fefbfb",}} /> 1800128283</li>
 </div>
 
 <div className = "flex flex-col px-8 py-1 list-none">
-    <h3 className ="font-bold text-white">Head Office</h3>
+    <h3 className ="font-bold text-white ">Contact Us</h3>
+    <li className ="font-bold text-white text-sm ">Head Office</li>
     <li className =" text-white">Srikakulam</li>
     <li className =" text-white">AndhraPradesh</li>
 </div> 
