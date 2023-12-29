@@ -27,9 +27,22 @@ const categories =
 // console.log(categories);
 
     return (
-        <div className = "text-center" >
+        <div >
+        <div  className="flex justify-center">
+            <div className= " border-b p-3  border-slate-200 w-6/12 text-center shadow-md ">
+               
          <h1 className = "font-bold text-xl">{name}</h1>
          <p className = "font-bold text-lg">{cuisines} - {costForTwo}</p>
+        
+         <div className="flex items-center justify-center">
+        <h4 className="bg-green-500 rounded-lg p-2 text-white">{avgRating}⭐</h4>
+            </div>
+
+         </div>
+         </div>
+
+         <div className = "text-center" >
+
         {categories.map((category,index) =>
         //  this is a controlled component
 
@@ -39,6 +52,7 @@ const categories =
         setShowIndex = {() => setShowIndex(index === showIndex ? null : index)}
         />)}
 
+        </div>
         </div>
     )
 }
