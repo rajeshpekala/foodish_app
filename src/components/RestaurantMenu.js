@@ -24,7 +24,7 @@ const categories =
  rmenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards.filter(
     (c)=>c?.card?.card?.["@type"]===
 "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
-// console.log(categories);
+console.log(categories[0].card.card.itemCards[0].card.info.id);
 
     return (
         <div >
@@ -46,11 +46,12 @@ const categories =
         {categories.map((category,index) =>
         //  this is a controlled component
 
-        <RestaurantCategory key ={category?.card?.card.id} 
+        <RestaurantCategory key ={category?.card?.card?.itemCards[0]?.card?.info?.id} 
         data = {category?.card?.card}
         showItems ={index === showIndex?true:false}
         setShowIndex = {() => setShowIndex(index === showIndex ? null : index)}
         />)}
+        
 
         </div>
         </div>
