@@ -16,7 +16,7 @@ const RestaurantMenu = () => {
 if(rmenu === null){
     return <Shimmer/>;
 }
-const {name,cuisines,avgRating,costForTwo} =rmenu?.cards[0] || cards[2].card?.card?.info;
+const {name,cuisines,avgRating,costForTwo} =rmenu?.cards[0]?.card?.card?.info || rmenu?.cards[2].card?.card?.info;
 //const {itemCards} = rmenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards[1].card.card;
 
 console.log(rmenu.cards);
@@ -26,7 +26,7 @@ const categories =
     (c)=>c?.card?.card?.["@type"]===
 "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
  
-console.log(categories);
+console.log("CAtegories",categories);
     return (
         <div >
         <div  className="flex justify-center">
@@ -49,6 +49,7 @@ console.log(categories);
         //  this is a controlled component
        category?.card?.card.itemCards &&
         <RestaurantCategory 
+        key={category[1]?.card?.card?.itemCards[0]?.card?.info?.id}
         data = {category?.card?.card}
         showItems ={index === showIndex?true:false}
         setShowIndex = {() => setShowIndex(index === showIndex ? null : index)}

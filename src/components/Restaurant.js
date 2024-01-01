@@ -7,6 +7,8 @@ const Restaurant = (props) => {
       cuisines,
       avgRating
      } = resdata?.info;
+
+     console.log(resdata);
      
      const {deliveryTime} = resdata?.info.sla;
 
