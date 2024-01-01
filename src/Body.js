@@ -53,10 +53,10 @@ const AppBody = () => {
     return(
         
         <div className = "appbody">
-             <div className="flex">
-            <div className="m-4 p-4">
+             <div className="flex justify-center ">
+            <div className="m-4 p-4 ">
             <input
-            className="border border-solid border-black"
+            className="  border-2 border-black rounded-md"
              type="text"
              placeholder="Search restaurants..."
              value = {searchText}
@@ -66,7 +66,7 @@ const AppBody = () => {
             }
                   />
                   <button
-                  className="px-4 py-[0.9] bg-blue-300 ml-3 rounded-lg"
+                  className="px-4 py-[0.9] m-3 bg-blue-300 ml-3 rounded-lg "
                   onClick={() =>{
                     
                     const list1 = ListofRestaurant.filter((val) =>
@@ -77,8 +77,8 @@ const AppBody = () => {
                   }}
                   >Find Restaurants</button>
             </div>
-            <div className = "flex items-center">
-                <button className = "px-3 m-7 bg-red-200 rounded-lg" type = "button"
+            <div className = "flex items-center ">
+                <button className = "px-3 m-4 bg-red-200 rounded-lg" type = "button"
                 onClick={ ()=>{
                     
                     const filteredList = ListofRestaurant.filter(
@@ -91,7 +91,7 @@ const AppBody = () => {
                 >TopRatedRestaurants</button>
                 </div>
             </div >
-            <div className = "flex flex-wrap">
+            <div className = "flex flex-wrap justify-center">
         {Filteredlist.map((restaurant) =>  (
        <Link
        className = "resline"

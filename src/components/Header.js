@@ -29,18 +29,18 @@ const cartItems = useSelector((store) => store.cart.items);
     return (
         <div className = "flex justify-between bg-yellow-400 shadow-md m-1">
             <div className = "logo-container">
-            <img className = "w-24" src = {LOGO_URL} alt = "logo" />
+            <img className = "w-24 md:w-32 lg:w-24" src = {LOGO_URL} alt = "logo" />
             
             </div >
           
             <div className = "flex  items-center" >
                 <ul className = "flex p-3 m-3">
-                    <li className="px-4 font-bold text-lg">OnlineStatus:{
+                    <li className="px-4 font-bold text-lg hidden md:block">OnlineStatus:{
                     onlinestatus?("✅"):("🚨") }</li>
                     <li className="px-4"><Link to ="/"><FontAwesomeIcon icon={faHouse} size="2xl" /></Link></li>
-                    <li className="px-4 font-bold text-lg"><Link to ="/about">About Us</Link></li>
-                    <li className="px-4 font-bold text-lg"><Link to = "/contact">Contact Us</Link></li>
-                    <li className="px-4 font-bold text-lg"><Link to = "/grocery">Grocery</Link></li>
+                    <li className="px-4 font-bold text-lg hidden md:block "><Link to ="/about">About Us</Link></li>
+                    <li className="px-4 font-bold text-lg hidden md:block"><Link to = "/contact">Contact Us</Link></li>
+                    <li className="px-4 font-bold text-lg hidden md:block "><Link to = "/grocery">Grocery</Link></li>
                     <li className="px-4 text-lg font-bold">
                     <Link to = "/cart"><FontAwesomeIcon icon={faCartShopping} size="2xl" style={{color: "#183153",}} />
                     ({cartItems.length}-Items)</Link>
@@ -52,7 +52,7 @@ const cartItems = useSelector((store) => store.cart.items);
                      setBtnname("login");   
                     }}
                     >{btnname}</button>
-                    <li className="px-4 py-1 font-bold text-lg">{loggedInUser}</li>
+                    <li className="px-4 py-1 font-bold text-lg hidden md:block">{loggedInUser}</li>
                 </ul>
                 
             </div>
