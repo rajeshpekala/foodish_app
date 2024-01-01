@@ -8,9 +8,9 @@ const Footer = () =>
  <div
 className = "bg-black border "
 >
-    <div className=" mx-16  sm:mb-0 sm:mx-0 flex flex-col sm:flex-row  justify-center sm:justify-evenly  ">
+    <div className=" items-center  sm:mb-0 sm:mx-0 flex flex-col sm:flex-row  justify-center sm:justify-evenly  ">
   
-<h3 className = "font-bold py-1  text-white text-xl ml-3 sm:ml-1">&copy; All rights reserved     &#169;</h3>
+<h3 className = "font-bold py-1  text-white text-xl ml-3 sm:ml-1">&copy; All rights reserved to Magicc &#169;</h3>
 
 <div  className = "flex flex-col px-8 py-1  list-none text-white mx-8">
     <h3 className ="font-bold text-xl">Follow Us on</h3>
