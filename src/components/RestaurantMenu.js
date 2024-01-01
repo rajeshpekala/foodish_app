@@ -10,22 +10,23 @@ const RestaurantMenu = () => {
 
   const {resId} = useParams(); 
   const rmenu = useRestaurantMenu(resId);
-
+  //console.log(rmenu);
   const [showIndex,setShowIndex] = useState(null);
 
 if(rmenu === null){
     return <Shimmer/>;
 }
-const {name,cuisines,avgRating,costForTwo} =rmenu?.cards[0]?.card?.card?.info;
-const {itemCards} = rmenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards[1].card.card;
+const {name,cuisines,avgRating,costForTwo} =rmenu?.cards[0] || cards[2].card?.card?.info;
+//const {itemCards} = rmenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards[1].card.card;
 
+console.log(rmenu.cards);
 
 const categories =
- rmenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards.filter(
+ rmenu?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards || rmenu?.cards[2].groupedCard?.cardGroupMap?.REGULAR.cards.filter(
     (c)=>c?.card?.card?.["@type"]===
 "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
-console.log(categories[0].card.card.itemCards[0].card.info.id);
-
+ 
+console.log(categories);
     return (
         <div >
         <div  className="flex justify-center">
@@ -42,11 +43,12 @@ console.log(categories[0].card.card.itemCards[0].card.info.id);
          </div>
 
          <div className = "text-center" >
+         
 
         {categories.map((category,index) =>
         //  this is a controlled component
-
-        <RestaurantCategory key ={category?.card?.card?.itemCards[0]?.card?.info?.id} 
+       category?.card?.card.itemCards &&
+        <RestaurantCategory 
         data = {category?.card?.card}
         showItems ={index === showIndex?true:false}
         setShowIndex = {() => setShowIndex(index === showIndex ? null : index)}

@@ -23,7 +23,7 @@ const ItemList = ({items}) => {
     progress: undefined,
     theme: "dark",
     }); }
-//  
+  console.log("Itejelkjlks",items );
     return(
 <div>
     {items.map((item)=> (
