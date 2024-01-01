@@ -14,7 +14,7 @@ render(){
    //console.log("Parent render");
   return ( 
   <div >
-    <h1 className="font-bold text-lg">AboutPage</h1>
+    <h1 className="font-bold text-lg ml-8">About Us</h1>
     
     <UserClass name = "First" location = "Srikakulam"/>
 
