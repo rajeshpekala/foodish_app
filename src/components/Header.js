@@ -38,14 +38,14 @@ const cartItems = useSelector((store) => store.cart.items);
                     <li className="px-4 font-bold text-lg hidden md:block">OnlineStatus:{
                     onlinestatus?("✅"):("🚨") }</li>
                     <li className="px-4"><Link to ="/"><FontAwesomeIcon icon={faHouse} size="2xl" /></Link></li>
-                    <li className="px-4 font-bold text-lg hidden md:block "><Link to ="/about">About Us</Link></li>
+                    <li className="px-4 font-bold text-lg  "><Link to ="/about">About Us</Link></li>
                     <li className="px-4 font-bold text-lg hidden md:block"><Link to = "/contact">Contact Us</Link></li>
                     <li className="px-4 font-bold text-lg hidden md:block "><Link to = "/grocery">Grocery</Link></li>
                     <li className="px-4 text-lg font-bold">
                     <Link to = "/cart"><FontAwesomeIcon icon={faCartShopping} size="2xl" style={{color: "#183153",}} />
                     ({cartItems.length}-Items)</Link>
                         </li>
-                    <button className = "font-bold text-lg"
+                    <button className = "font-bold text-lg hidden md:block"
                     onClick={ () => {
                         btnname === "login"?
                      setBtnname("logout"):
