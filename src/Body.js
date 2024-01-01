@@ -53,8 +53,9 @@ const AppBody = () => {
     return(
         
         <div className = "appbody">
-             <div className="flex justify-center ">
-            <div className="m-4 p-4 ">
+            <div className="flex flex-col sm:flex sm:flex-row sm:justify-center" >
+         
+            <div className=" ">
             <input
             className="  border-2 border-black rounded-md"
              type="text"
@@ -66,7 +67,7 @@ const AppBody = () => {
             }
                   />
                   <button
-                  className="px-4 py-[0.9] m-3 bg-blue-300 ml-3 rounded-lg "
+                  className="px-4  m-2  bg-blue-300  rounded-lg "
                   onClick={() =>{
                     
                     const list1 = ListofRestaurant.filter((val) =>
@@ -77,8 +78,9 @@ const AppBody = () => {
                   }}
                   >Find Restaurants</button>
             </div>
-            <div className = "flex items-center ">
-                <button className = "px-3 m-4 bg-red-200 rounded-lg" type = "button"
+            
+            <div className ="sm:mt-1 m-auto sm:m-0 sm:ml-4 px-1">
+                <button className = "  bg-red-300 rounded-lg py-1"  type = "button"
                 onClick={ ()=>{
                     
                     const filteredList = ListofRestaurant.filter(
@@ -89,8 +91,9 @@ const AppBody = () => {
                 }} 
 
                 >TopRatedRestaurants</button>
-                </div>
+               </div>
             </div >
+
             <div className = "flex flex-wrap justify-center">
         {Filteredlist.map((restaurant) =>  (
        <Link
