@@ -6,6 +6,7 @@ import UserContext from "../utils/UserContext";
 import { useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse,faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import HamBurgerButton from "../utils/HamburgerButton";
 
 const Header = () => {
 const [btnname,setBtnname] = useState("login");
@@ -45,6 +46,7 @@ const cartItems = useSelector((store) => store.cart.items);
                     <Link to = "/cart"><FontAwesomeIcon icon={faCartShopping} size="2xl" style={{color: "#183153",}} />
                     ({cartItems.length}-Items)</Link>
                         </li>
+                     
                     <button className = "font-bold text-lg hidden md:block"
                     onClick={ () => {
                         btnname === "login"?
@@ -53,6 +55,7 @@ const cartItems = useSelector((store) => store.cart.items);
                     }}
                     >{btnname}</button>
                     <li className="px-4 py-1 font-bold text-lg hidden md:block">{loggedInUser}</li>
+                    <li></li>
                 </ul>
                 
             </div>

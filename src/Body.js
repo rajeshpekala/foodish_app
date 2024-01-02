@@ -55,9 +55,9 @@ const AppBody = () => {
         <div className = "appbody">
             <div className="flex flex-col sm:flex sm:flex-row sm:justify-center" >
          
-            <div className=" ">
+            <div className=" my-3 sm:my-0">
             <input
-            className="  border-2 border-black rounded-md"
+            className="  border-2 border-black rounded-md ml-4 sm:ml-0"
              type="text"
              placeholder="Search restaurants..."
              value = {searchText}
@@ -67,7 +67,7 @@ const AppBody = () => {
             }
                   />
                   <button
-                  className="px-4  m-2  bg-blue-300  rounded-lg "
+                  className="px-2  sm:m-2 ml-4 mr-2 bg-blue-300  rounded-lg "
                   onClick={() =>{
                     
                     const list1 = ListofRestaurant.filter((val) =>

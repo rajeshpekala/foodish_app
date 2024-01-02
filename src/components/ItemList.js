@@ -43,15 +43,15 @@ const ItemList = ({items}) => {
           
             <p className = "text-xs">{item.card.info.description}</p>
             </div>
-            <div className="w-3/12 p-4">
+            <div className="w-3/12 sm:p-4">
                 <div className="absolute">
-                    <button className ="p-1 bg-white text-black rounded-lg"
+                    <button className ="p-1 bg-black text-white font-bold rounded-lg"
                     onClick={()=> {handleAddItem(item)}}
                     >
                   Add+</button>
                   <ToastContainer />
                 </div>
-             <img src = {CDN_URL + item.card.info.imageId } className="w-full"/>
+             <img src = {CDN_URL + item.card.info.imageId } className="w:full"/>
          </div>
         
         </div>
