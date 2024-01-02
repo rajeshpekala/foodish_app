@@ -57,7 +57,7 @@ const AppBody = () => {
          
             <div className=" my-3 sm:my-0">
             <input
-            className="  border-2 border-black rounded-md ml-4 sm:ml-0"
+            className="  border-2 border-black rounded-md ml-4 sm:ml-0 sm:px-0"
              type="text"
              placeholder="Search restaurants..."
              value = {searchText}

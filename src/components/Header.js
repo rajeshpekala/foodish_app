@@ -6,7 +6,7 @@ import UserContext from "../utils/UserContext";
 import { useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse,faCartShopping } from '@fortawesome/free-solid-svg-icons';
-import HamBurgerButton from "../utils/HamburgerButton";
+
 
 const Header = () => {
 const [btnname,setBtnname] = useState("login");
