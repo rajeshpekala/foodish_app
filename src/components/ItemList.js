@@ -23,12 +23,12 @@ const ItemList = ({items}) => {
     progress: undefined,
     theme: "dark",
     }); }
-  console.log("Itejelkjlks",items );
+  //console.log("Itejelkjlks",items );
     return(
 <div>
     {items.map((item)=> (
         <div key = {item.card.info.id}
-        className = "p-2 m-2 border border-gray-300 border-b-2 text-left flex">
+        className = "p-2 m-2 border border-gray-400 border-b-3 bg-gray-200 rounded-lg text-left flex">
        <div className = "m-2">{item.card.info.itemAttribute.vegClassifier === "VEG" ? "🟢" : "🔴" }</div>
           <div className="w-9/12">
             <div className = "py-2">

@@ -19,7 +19,7 @@ const handleClearCart = (item) => {
 
 
     return(
-        <div>
+        <div className="bg-red-300">
         <div className ="text-center font-bold text-xl m-4">Cart
         
         </div >
@@ -27,7 +27,13 @@ const handleClearCart = (item) => {
             <button className=" font-bold  bg-black text-white p-2"  
             onClick={handleClearCart}>ClearCart</button>
             {cartItems.length === 0 && 
-                <h1>Cart is Empty Add Someitems😊</h1>
+            <div className = "bg-red-300 flex">
+                <img 
+                src = "https://cdn-icons-png.flaticon.com/512/263/263142.png"
+                className="w-72"
+                />
+                <h1 className="text-3xl mt-36 font-bold ml-16">Cart is Empty Add Someitems😊</h1>
+                </div>
              }
             </div>
         <div className="w-6/12 m-auto">
