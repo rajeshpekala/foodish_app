@@ -6,7 +6,7 @@ import { faPhone } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => 
  <div
-className = "bg-black border "
+className = "bg-black border mt-auto "
 >
     <div className=" items-center  sm:items-start  flex flex-col sm:flex-row     ">
   <div>

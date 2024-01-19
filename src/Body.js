@@ -52,7 +52,7 @@ const AppBody = () => {
 
     return(
         
-        <div className = "appbody">
+        <div className = "min-h-screen">
             <div className="flex flex-col sm:flex sm:flex-row sm:justify-center" >
          
             <div className=" my-3 sm:my-0">
