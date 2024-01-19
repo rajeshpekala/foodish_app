@@ -28,7 +28,7 @@ const cartItems = useSelector((store) => store.cart.items);
 // ); 
 
     return (
-        <div className = "flex justify-between bg-yellow-400 shadow-md m-1">
+        <div className = "flex justify-between  bg-gradient-to-tr from-yellow-300 to-red-300 shadow-md m-1">
             <div className = "logo-container">
             <Link to="/"><img className = "w-24 md:w-32 lg:w-24" src = {LOGO_URL} alt = "logo" /></Link>
             
