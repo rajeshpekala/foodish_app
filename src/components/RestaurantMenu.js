@@ -19,10 +19,10 @@ if(rmenu === null){
 const {name,cuisines,avgRating,costForTwo} =rmenu?.cards[0]?.card?.card?.info || rmenu?.cards[2].card?.card?.info;
 //const {itemCards} = rmenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards[1].card.card;
 
-//console.log(rmenu.cards);
+console.log(rmenu.cards);
 
 const categories =
- rmenu?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards || rmenu?.cards[2].groupedCard?.cardGroupMap?.REGULAR.cards.filter(
+ rmenu?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards || rmenu?.cards[2].groupedCard?.cardGroupMap?.REGULAR.cards.filter(
     (c)=>c?.card?.card?.["@type"]===
 "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
  
