@@ -4,7 +4,7 @@ import { useState,useEffect } from "react";
 const useRestaurantMenu = (resId) => {
     const  [rmenu,setRmenu] = useState(null);
 
-  
+  console.log(rmenu)
         useEffect(() => {
             fetchMenu();
         },[]);
@@ -12,7 +12,7 @@ const useRestaurantMenu = (resId) => {
         
         
         const fetchMenu = async () =>{
-        const data = await fetch(MENU_URL +resId);
+        const data = await fetch(MENU_URL);
         const jsonValue = await data.json();
         
         setRmenu(jsonValue.data);

@@ -21,18 +21,28 @@ const AppBody = () => {
     );
     
     const fetchdata = async () => {
-        const data = await fetch("https://swiggy-api.vercel.app/api/data");
-        const jsonvalue = await data.json();
-        console.log(jsonvalue);
-        setListofRestaurant( jsonvalue?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants ||
-             jsonvalue?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants ||
-             jsonvalue?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-             );
-        setFilteredlist( jsonvalue?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants ||
-            jsonvalue?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants ||
-            jsonvalue?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-       
-    //   https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING
+      const data = await fetch("https://swiggy-api.vercel.app/api/data");
+      const jsonvalue = await data.json();
+      console.log(jsonvalue);
+      setListofRestaurant(
+        jsonvalue?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants ||
+          jsonvalue?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+            ?.restaurants ||
+          jsonvalue?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+            ?.restaurants
+      );
+      setFilteredlist(
+        jsonvalue?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants ||
+          jsonvalue?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+            ?.restaurants ||
+          jsonvalue?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+            ?.restaurants
+      );
+
+      //   https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING
+      // https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=19.1174798&lng=72.86916029999999&restaurantId=
     }
     
 
