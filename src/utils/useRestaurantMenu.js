@@ -12,7 +12,7 @@ const useRestaurantMenu = (resId) => {
         
         
         const fetchMenu = async () =>{
-        const data = await fetch(MENU_URL);
+        const data = await fetch(MENU_URL+resId);
         const jsonValue = await data.json();
         
         setRmenu(jsonValue.data);
