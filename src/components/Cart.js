@@ -35,7 +35,7 @@ const hanldeRemoveCart = (item) =>{
             className=" font-bold  bg-black text-white p-2 ml-4 rounded-md"
             onClick={hanldeRemoveCart}
           >
-           Remove Item
+           Remove last Item
           </button>
           {cartItems.length === 0 && (
             <div className="bg-red-300 flex">
