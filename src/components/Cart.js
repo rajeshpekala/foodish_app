@@ -1,4 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import ItemList from  "../components/ItemList";
 
@@ -18,7 +20,21 @@ const handleClearCart = (item) => {
 
 const hanldeRemoveCart = (item) =>{
     dispatch(removeItem(item))
+    notify("Item Removed");
 }
+
+ const notify = (itemName) => {
+   toast.error(itemName + " ", {
+     position: "bottom-left",
+     autoClose: 3000,
+     hideProgressBar: false,
+     closeOnClick: true,
+     pauseOnHover: true,
+     draggable: true,
+     progress: undefined,
+     theme: "dark",
+   });
+ };
 
 
     return (
@@ -35,8 +51,9 @@ const hanldeRemoveCart = (item) =>{
             className=" font-bold  bg-black text-white p-2 ml-4 rounded-md"
             onClick={hanldeRemoveCart}
           >
-           Remove last Item
+            Remove last Item
           </button>
+          <ToastContainer />
           {cartItems.length === 0 && (
             <div className="bg-red-300 flex">
               <img
