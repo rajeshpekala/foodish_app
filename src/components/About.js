@@ -12,14 +12,17 @@ class About extends React.Component{
   }
 render(){
    //console.log("Parent render");
-  return ( 
-  <div className = "min-h-screen" >
-    <h1 className="font-bold text-lg ml-4 rounded-lg px-6 py-1 bg-gradient-to-b from-yellow-400 to-red-500 inline">About Us</h1>
-    
-    <UserClass name = "First" location = "Srikakulam"/>
-    
+  return (
+    <div className="min-h-screen bg-gradient-to-t to-black from-slate-500 ">
+      <div className="flex justify-center ">
+        <div className="flex flex-col">
+          <h1 className="text-white font-bold text-4xl ml-10">About Us</h1>
 
-</div> );
+          <UserClass name="First" location="Srikakulam" />
+        </div>
+      </div>
+    </div>
+  );
  
   }
 }
