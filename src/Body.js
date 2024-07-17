@@ -49,7 +49,13 @@ const AppBody = () => {
     
     const onlinestatus = useOnlineStatus();
     if (onlinestatus === false)
-   return (<h1>You are Offline</h1>)
+   return (
+     <div className="flex justify-center items-center ">
+       <h1 className="text-3xl font-semibold p-2 bg-orange-500 rounded-md mt-5">
+         You are Offline Please Check Your Internet Connection..
+       </h1>
+     </div>
+   );
     ///u need to use to return to get render in react
     
     if (!ListofRestaurant || ListofRestaurant.length === 0) {
