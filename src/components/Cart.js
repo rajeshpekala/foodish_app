@@ -12,6 +12,8 @@ import { clearCart, removeItem } from "../utils/cartSlice";
     ///subscribing the items
 const cartItems = useSelector((store) => store.cart.items);
 
+{console.log(cartItems)}
+
 const dispatch = useDispatch();
 
 const handleClearCart = (item) => {
